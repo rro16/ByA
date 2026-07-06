@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Taza Ceramic Rosa - Bloom &amp; Gold</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-fixed": "#fbdbde",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-tint": "#70585b",
+                        "on-primary-container": "#765e61",
+                        "error-container": "#ffdad6",
+                        "outline": "#807475",
+                        "inverse-primary": "#debfc2",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#5e604d",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#735c00",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "on-surface-variant": "#4f4445",
+                        "on-primary-fixed-variant": "#574144",
+                        "primary-fixed-dim": "#debfc2",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#70585b",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#e3e3cb",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#fadadd",
+                        "outline-variant": "#d2c3c4",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e4e4cc",
+                        "surface-bright": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#646552",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#745c00",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#281719",
+                        "surface-container": "#eeeeee",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "secondary-container": "#fed65b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script src="js/carrito.js" defer></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+    <!-- TopAppBar -->
+    <header class="bg-surface sticky top-0 z-40 border-b border-outline-variant w-full">
+        <div class="flex flex-col w-full max-w-container-max mx-auto px-gutter py-base">
+            <div class="flex items-center justify-between w-full">
+                <!-- Mobile Drawer Menu Icon -->
+                <button class="text-on-surface-variant hover:text-primary transition-colors p-2 md:hidden" onclick="toggleDrawer()">
+                    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+                </button>
+                <a class="font-headline-lg text-headline-lg text-primary italic font-bold" href="index.html">
+                    Bloom &amp; Gold
+                </a>
+                <!-- Actions -->
+                <a href="carrito.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 p-2 relative">
+                    <span class="font-label-md text-label-md hidden sm:inline">Carrito</span>
+                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                    <span id="cart-counter" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full hidden">0</span>
+                </a>
+            </div>
+            <!-- Desktop Top Navigation Nav -->
+            <nav class="hidden md:flex justify-center gap-8 mt-4 w-full">
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2 font-label-md text-label-md" href="index.html">Home</a>
+                <div class="relative group">
+                    <a class="text-primary font-bold border-b-2 border-secondary py-2 flex items-center gap-1 font-label-md text-label-md" href="productos.html">
+                        Productos
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                    </a>
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-lg rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-outline-variant p-4">
+                        <ul class="flex flex-col gap-2">
+                            <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="tazas.html">Tazas</a></li>
+                            <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="polos.html">Polos</a></li>
+                            <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="tomatodos.html">Tomatodos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2 font-label-md text-label-md" href="sobre-nosotros.html">About Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2 font-label-md text-label-md" href="contacto.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NavigationDrawer (Mobile Only) -->
+    <aside class="fixed inset-y-0 left-0 z-50 flex flex-col rounded-r-lg h-full w-80 bg-surface-container-lowest shadow-[0px_10px_30px_rgba(0,0,0,0.05)] transform -translate-x-full transition-transform duration-300 md:hidden" id="mobile-drawer">
+        <div class="p-6 border-b border-outline-variant flex justify-between items-center">
+            <h2 class="font-headline-md text-headline-md text-primary">Menu</h2>
+            <button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-variant" onclick="toggleDrawer()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="flex flex-col gap-2">
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="index.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="font-label-md text-label-md">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="productos.html">
+                        <span class="material-symbols-outlined">redeem</span>
+                        <span class="font-label-md text-label-md">Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="sobre-nosotros.html">
+                        <span class="material-symbols-outlined">info</span>
+                        <span class="font-label-md text-label-md">About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="contacto.html">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span class="font-label-md text-label-md">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+    <main class="flex-grow w-full max-w-container-max mx-auto px-4 md:px-gutter py-lg md:py-xl flex flex-col gap-xl">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm w-full">
+            <a class="hover:text-primary transition-colors hover:underline decoration-secondary" href="index.html">Inicio</a>
+            <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+            <a class="hover:text-primary transition-colors hover:underline decoration-secondary" href="productos.html">Productos</a>
+            <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+            <a class="hover:text-primary transition-colors hover:underline decoration-secondary" href="tazas.html">Tazas</a>
+            <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+            <span class="text-primary font-semibold">Taza Ceramic Rosa</span>
+        </nav>
+
+        <!-- Product Hero Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start w-full">
+            <!-- Image Gallery -->
+            <div class="flex flex-col gap-4 w-full">
+                <div class="w-full aspect-square rounded-lg overflow-hidden bg-[#F5F5DC] shadow-[0px_4px_20px_rgba(250,218,221,0.3)] relative group">
+                    <img id="main-product-image" alt="Taza Ceramic Rosa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4cCLMPA3T-0UOvONh5S3ey_aoC7cxLPVVneiMZiVEdI_zCuuiKefab9323IW5pJFQvbjMVPILMVvf6QDS6E1kxV9-AivvpCOsOEQhn2I-0blociuLaMFaei-20jaUhjnVtzbkB67gc1OsO1OIEmbVSEQFf2OSV1U_OzifKY5hR8rkDxa_v-VIrUrxfJJ4hUxUrNPTGXKdAu1WL7MTWWWUTOhZM7VdnzPso4uHtvr4rX0hx_hfRAGuXeJPxPo11PLpKjrx0Wfz_dC">
+                    <!-- Badges -->
+                    <div class="absolute top-4 left-4 flex gap-2">
+                        <span class="bg-primary-container text-primary font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Nuevo</span>
+                        <span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Artesanal</span>
+                    </div>
+                </div>
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-4 gap-4 w-full">
+                    <button onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuBi4cCLMPA3T-0UOvONh5S3ey_aoC7cxLPVVneiMZiVEdI_zCuuiKefab9323IW5pJFQvbjMVPILMVvf6QDS6E1kxV9-AivvpCOsOEQhn2I-0blociuLaMFaei-20jaUhjnVtzbkB67gc1OsO1OIEmbVSEQFf2OSV1U_OzifKY5hR8rkDxa_v-VIrUrxfJJ4hUxUrNPTGXKdAu1WL7MTWWWUTOhZM7VdnzPso4uHtvr4rX0hx_hfRAGuXeJPxPo11PLpKjrx0Wfz_dC', this)" class="aspect-square rounded-DEFAULT overflow-hidden bg-[#F5F5DC] border-2 border-primary shadow-[0px_4px_20px_rgba(250,218,221,0.3)] hover:opacity-80 transition-opacity">
+                        <img alt="Thumbnail 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4cCLMPA3T-0UOvONh5S3ey_aoC7cxLPVVneiMZiVEdI_zCuuiKefab9323IW5pJFQvbjMVPILMVvf6QDS6E1kxV9-AivvpCOsOEQhn2I-0blociuLaMFaei-20jaUhjnVtzbkB67gc1OsO1OIEmbVSEQFf2OSV1U_OzifKY5hR8rkDxa_v-VIrUrxfJJ4hUxUrNPTGXKdAu1WL7MTWWWUTOhZM7VdnzPso4uHtvr4rX0hx_hfRAGuXeJPxPo11PLpKjrx0Wfz_dC">
+                    </button>
+                    <button onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuBvD0xkZuO9IqWH8AlGA_JPwwoRaAAMBM7kmaGWTIhgy7dkykGxx52BY39LhrOV3c_qbjd25u5cMnLfev8h18Yg-wWeww7krnr5GiLcK3Xl1DgLI58RizccUjDXgrRL3Mbs0fQVoq9FQcEilNGbnw7BJOMGViozEnafLifEZdJL5E-NXYqfxLH5XSGP0X5VWcIPsu1jy2Lz1_tWNVyzuO00WtsZCJv0q9uNEK15kjXbbrAIfLEeZ2E9dJpdD8o0c0e_BKYe5rcdcPOH', this)" class="aspect-square rounded-DEFAULT overflow-hidden bg-[#F5F5DC] border-2 border-transparent hover:border-outline-variant transition-colors hover:opacity-80 shadow-[0px_4px_20px_rgba(250,218,221,0.3)]">
+                        <img alt="Thumbnail 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvD0xkZuO9IqWH8AlGA_JPwwoRaAAMBM7kmaGWTIhgy7dkykGxx52BY39LhrOV3c_qbjd25u5cMnLfev8h18Yg-wWeww7krnr5GiLcK3Xl1DgLI58RizccUjDXgrRL3Mbs0fQVoq9FQcEilNGbnw7BJOMGViozEnafLifEZdJL5E-NXYqfxLH5XSGP0X5VWcIPsu1jy2Lz1_tWNVyzuO00WtsZCJv0q9uNEK15kjXbbrAIfLEeZ2E9dJpdD8o0c0e_BKYe5rcdcPOH">
+                    </button>
+                    <button onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuDewjZW2jybja-J2_-mwy2SCCGl3XmIunXSHNtkn62NlymVCXl_XbSppi-KzAW70AZ3hGXT6gQIPPEe3gkg1cJg1LdwP74lKmz1hYNYqV973o8jXvae46P8GllezrYpRxdCanSjfD9yIT-67ZEH9tq-gAzmOXp8zJlLXHAMvChNIqLTtp0qwYsqsrwG8YgmtOee4KE8fdu2nIM1b9jvDg72ZeKG2HQnXNDGOAq5BrVy66Ic2C24YAa8rhl6OZEK9LtxLzP3sSNV_W26', this)" class="aspect-square rounded-DEFAULT overflow-hidden bg-[#F5F5DC] border-2 border-transparent hover:border-outline-variant transition-colors hover:opacity-80 shadow-[0px_4px_20px_rgba(250,218,221,0.3)]">
+                        <img alt="Thumbnail 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDewjZW2jybja-J2_-mwy2SCCGl3XmIunXSHNtkn62NlymVCXl_XbSppi-KzAW70AZ3hGXT6gQIPPEe3gkg1cJg1LdwP74lKmz1hYNYqV973o8jXvae46P8GllezrYpRxdCanSjfD9yIT-67ZEH9tq-gAzmOXp8zJlLXHAMvChNIqLTtp0qwYsqsrwG8YgmtOee4KE8fdu2nIM1b9jvDg72ZeKG2HQnXNDGOAq5BrVy66Ic2C24YAa8rhl6OZEK9LtxLzP3sSNV_W26">
+                    </button>
+                    <button onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuD71uOUmrlI_uknbDS2pmkaiApI44F8eZQUpG0AyKUDgQ0yROKMgLQci0CqFyswA717osPpuagPA52AXjh28kb7fXL5qJlveaimLeBN8cSNcAabszm-GjXighOPI8sy5zbhnA-dZhYofw9zdEPp1N1cnCb7jpaYG61mAz39pxfwuccSG4HVHPOoMvpI4f0ZEANt_KOzOdbsu8O0MA2Wvte78A2vacDxwABrKnkfrJA4U_VByYf0w6iaAyBMaelUk6fCG8EqXc9qG_v-', this)" class="aspect-square rounded-DEFAULT overflow-hidden bg-[#F5F5DC] border-2 border-transparent hover:border-outline-variant transition-colors hover:opacity-80 shadow-[0px_4px_20px_rgba(250,218,221,0.3)]">
+                        <img alt="Thumbnail 4" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD71uOUmrlI_uknbDS2pmkaiApI44F8eZQUpG0AyKUDgQ0yROKMgLQci0CqFyswA717osPpuagPA52AXjh28kb7fXL5qJlveaimLeBN8cSNcAabszm-GjXighOPI8sy5zbhnA-dZhYofw9zdEPp1N1cnCb7jpaYG61mAz39pxfwuccSG4HVHPOoMvpI4f0ZEANt_KOzOdbsu8O0MA2Wvte78A2vacDxwABrKnkfrJA4U_VByYf0w6iaAyBMaelUk6fCG8EqXc9qG_v-">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="flex flex-col gap-6 w-full">
+                <div class="flex flex-col gap-2">
+                    <h1 class="font-headline-xl text-headline-xl text-on-surface">Taza Ceramic Rosa</h1>
+                    <div class="flex items-center gap-4">
+                        <span class="font-headline-lg text-headline-lg text-primary">S/ 35.00</span>
+                        <div class="flex items-center gap-1">
+                            <div class="flex text-secondary">
+                                <span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="material-symbols-outlined text-[18px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="material-symbols-outlined text-[18px]" data-icon="star_half" data-weight="fill">star_half</span>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant ml-1">4.8 (24 reseñas)</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Taza de cerámica artesanal con acabado mate y detalles en oro de 12k. Ideal para disfrutar de tu café o té favorito con un toque de elegancia.
+                </p>
+
+                <!-- Color Selection -->
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Color: Rosado Pastel</span>
+                    <div class="flex gap-3">
+                        <button aria-label="Rosado Pastel" class="w-10 h-10 rounded-full bg-[#FADADD] border-2 border-primary ring-2 ring-transparent ring-offset-2 hover:opacity-80 transition-all focus:outline-none focus:ring-primary"></button>
+                        <button aria-label="Blanco Crema" class="w-10 h-10 rounded-full bg-[#FDFBF7] border border-outline-variant ring-2 ring-transparent ring-offset-2 hover:opacity-80 transition-all focus:outline-none focus:ring-primary"></button>
+                        <button aria-label="Celeste Cielo" class="w-10 h-10 rounded-full bg-[#E0F2FE] border border-outline-variant ring-2 ring-transparent ring-offset-2 hover:opacity-80 transition-all focus:outline-none focus:ring-primary"></button>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Tamaño</span>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors">250ml</button>
+                        <button class="px-6 py-2 rounded-full bg-primary-container text-primary border border-primary font-label-md text-label-md font-bold shadow-[0px_4px_20px_rgba(250,218,221,0.3)]">325ml</button>
+                        <button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors">450ml</button>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-4 w-full">
+                    <!-- Quantity -->
+                    <div class="flex items-center justify-between border border-outline-variant rounded-full px-4 py-2 bg-surface-container-lowest w-full sm:w-32">
+                        <button id="qty-minus" aria-label="Decrease quantity" class="text-on-surface-variant hover:text-primary transition-colors p-1">
+                            <span class="material-symbols-outlined text-[20px]" data-icon="remove">remove</span>
+                        </button>
+                        <span id="qty-val" class="font-label-md text-label-md text-on-surface">1</span>
+                        <button id="qty-plus" aria-label="Increase quantity" class="text-on-surface-variant hover:text-primary transition-colors p-1">
+                            <span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                        </button>
+                    </div>
+                    <button onclick="addCurrentToCart()" class="flex-1 bg-primary-container text-primary font-label-md text-label-md font-bold py-3 px-6 rounded-full hover:bg-primary-fixed hover:opacity-90 transition-all shadow-[0px_4px_20px_rgba(250,218,221,0.3)] text-center">
+                        Añadir al Carrito
+                    </button>
+                    <a href="carrito.html" class="flex-1 bg-transparent border border-secondary text-secondary font-label-md text-label-md font-bold py-3 px-6 rounded-full hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all text-center">
+                        Comprar Ahora
+                    </a>
+                </div>
+
+                <!-- Extra info text -->
+                <div class="flex items-center gap-2 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[16px]" data-icon="local_shipping">local_shipping</span>
+                    <span>Envío gratis en pedidos sobre S/ 150.00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details Accordion -->
+        <section class="w-full max-w-3xl mx-auto flex flex-col pt-8">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-8">Detalles del Producto</h2>
+            <div class="border-t border-b border-surface-variant divide-y divide-surface-variant">
+                <!-- Accordion Item 1 -->
+                <details class="group py-4" open>
+                    <summary class="flex items-center justify-between cursor-pointer list-none font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors">
+                        Material
+                        <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+                    </summary>
+                    <div class="pt-4 pb-2 font-body-md text-body-md text-on-surface-variant">
+                        Cerámica de alta temperatura, moldeada a mano. Cada pieza es única y puede presentar ligeras variaciones que realzan su carácter artesanal.
+                    </div>
+                </details>
+                <!-- Accordion Item 2 -->
+                <details class="group py-4">
+                    <summary class="flex items-center justify-between cursor-pointer list-none font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors">
+                        Cuidados
+                        <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+                    </summary>
+                    <div class="pt-4 pb-2 font-body-md text-body-md text-on-surface-variant">
+                        Lavar a mano con esponja suave. No apto para microondas debido a los detalles en oro. Evitar cambios bruscos de temperatura.
+                    </div>
+                </details>
+                <!-- Accordion Item 3 -->
+                <details class="group py-4">
+                    <summary class="flex items-center justify-between cursor-pointer list-none font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors">
+                        Envíos y Devoluciones
+                        <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+                    </summary>
+                    <div class="pt-4 pb-2 font-body-md text-body-md text-on-surface-variant">
+                        Procesamos los pedidos en 1-2 días hábiles. Tienes 7 días para solicitar un cambio si el producto llega dañado. Revisa nuestra política completa de envíos para más detalles.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="w-full flex flex-col gap-8 pt-8">
+            <div class="flex items-end justify-between w-full">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Reseñas de Clientes</h2>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-secondary">
+                            <span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined" data-icon="star_half" data-weight="fill">star_half</span>
+                        </div>
+                        <span class="font-label-md text-label-md text-on-surface-variant">4.8 basado en 24 reseñas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                <!-- Review 1 -->
+                <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0px_4px_20px_rgba(250,218,221,0.3)] flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center font-headline-md text-headline-md">M</div>
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface">María G.</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Hace 2 semanas</span>
+                            </div>
+                        </div>
+                        <div class="flex text-secondary">
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        "¡Es hermosa! Los detalles dorados brillan súper lindo. Se nota la calidad y el cariño con el que está hecha. Vino muy bien empacada, lista para regalo."
+                    </p>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0px_4px_20px_rgba(250,218,221,0.3)] flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-md text-headline-md">L</div>
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface">Lucía F.</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Hace 1 mes</span>
+                            </div>
+                        </div>
+                        <div class="flex text-secondary">
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+                            <span class="material-symbols-outlined text-[16px]" data-icon="star_border">star_border</span>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        "Compré esta taza para mi oficina y me encanta. El tamaño es perfecto. Solo hay que tener cuidado al lavarla para no arruinar el oro, pero vale totalmente la pena."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="w-full flex flex-col gap-8 pt-8">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface text-center">También te podría gustar</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full animate-fade-in">
+                <!-- Related Product 1 -->
+                <div onclick="location.href='detalle-taza.html'" class="group bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0px_4px_20px_rgba(250,218,221,0.3)] hover:shadow-[0px_8px_30px_rgba(250,218,221,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full cursor-pointer">
+                    <div class="w-full aspect-square bg-[#F5F5DC] overflow-hidden relative">
+                        <img alt="Journal Floral Gold" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_DrJNui8tOTdHoBSiaKoyLj7QKhPEoGozdNm0eYzcI_rM2XGHmHEGvODdj-bxvekQURLp981dNJKHOBHwMg5Mbq0RemIaPFiHqWxm7ffIMkMjZYSSDBbcVBL2Tx_kdbizEIPkVua6pV24USAfQdRL8ivLQdcJi2jB5SQHfz7V_k1jaIsf4v19b9TZyVCZ1uArlj5gMa7Qli16NCaq3rX-4w0qCvLTdlo2QOTB60S6lFNYhomZr5dz2Pw0V5gz5NYeJhcuREi0qpKF">
+                    </div>
+                    <div class="p-4 flex flex-col gap-2 flex-grow justify-between">
+                        <div>
+                            <h3 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2">Taza Botánica</h3>
+                            <div class="flex items-center gap-1 mt-1 text-secondary">
+                                <span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">5.0</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-headline-md text-headline-md text-on-surface">S/ 19.50</span>
+                            <button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-primary-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); agregarAlCarrito({id: 'taza-botanica', nombre: 'Taza Botánica', precio: 19.50, imagen: 'https://lh3.googleusercontent.com/aida/AP1WRLtApg9VxPek8wRXZaTsJNKO0LH7QVRshptDL0DZWIaqdtURQYtKn1eW3hU-RTgr1kqIQf9G9QogZeQdoWJuLudbwda6oSxEJOCwrqJSbNeACp9m-yraQ4xzUp3bWtsZAYxlrLzkMOBJS7wU0ThaznbrvpljlZNoMx8iOP8m_MqcZMYLgsW8-SzX_7bEH6GcHBrdVBHn2GHPPSh7orVjgvAyS_oWgn2HXV4nN7eWADBSFOEN-FiZxr16M7M', cantidad: 1})">
+                                <span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Product 2 -->
+                <div onclick="location.href='detalle-taza.html'" class="group bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0px_4px_20px_rgba(250,218,221,0.3)] hover:shadow-[0px_8px_30px_rgba(250,218,221,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full cursor-pointer">
+                    <div class="w-full aspect-square bg-[#F5F5DC] overflow-hidden relative">
+                        <img alt="Taza Minimalista Blanca" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoSRud5fqtT48v8xOT0H8UBYgCQaq-Yrnm3fSb3SBpCI-IHgml8o0a9hD8V43YqZ92YhgZAh73N5aMEaUSyQwVeo3Bn7F5g5VEi-krON9rL3LgJpwvlwN_9EH8SCu6I6OwHYJKVXW08OL_ySSnrkR-VaQ18G831J8GmySjqOpx96NHapTdhggGDl8r83RHAPMmnl6EBDJ8162eyGdBv3NBfA_UR60vI-QI0uY29PPQkFFFyxa4c2qXHIwWXwW_yuUoHW2X2XM9lOA1">
+                    </div>
+                    <div class="p-4 flex flex-col gap-2 flex-grow justify-between">
+                        <div>
+                            <h3 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2">Taza Minimalist</h3>
+                            <div class="flex items-center gap-1 mt-1 text-secondary">
+                                <span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill">star</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">4.9</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="font-headline-md text-headline-md text-on-surface">S/ 18.00</span>
+                            <button aria-label="Add to cart" class="w-8 h-8 rounded-full bg-primary-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" onclick="event.stopPropagation(); agregarAlCarrito({id: 'taza-minimalist', nombre: 'Taza Minimalist', precio: 18.00, imagen: 'https://lh3.googleusercontent.com/aida/AP1WRLuUvXBnieqeljLXB_LkG5QkXt_Z-px_JGFILPR_S6H4TFqyOVFrgTKapQvtHSQQH09kxHegRkjpbjimDYQsSt3-Mt2gu4dteA-_GhgazvIYJGGE_mDocBilA-G5yZgWqv_fB68u3mmPwJuZWVyi5H-BxmD5hwIDisnCzStWFQESqgP1KbDntOqjCVsW3Op8CQUw8h-8FBt_9hsv6Dpc1g0jFOAhY1b4RpRiOUy423jWPyCYN-S7CYTf0Mnr', cantidad: 1})">
+                                <span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-gutter right-gutter z-50">
+        <a class="whatsapp-pulse bg-primary text-on-primary rounded-full p-4 shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/51967959557?text=Hola%20Bloom%20%26%20Gold%2C%20tengo%20una%20consulta%20sobre%20sus%20productos." target="_blank">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+            <span class="absolute right-full mr-4 bg-white px-4 py-2 rounded-full text-label-sm text-primary cloud-shadow-l2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-outline-variant">
+                ¿Necesitas ayuda?
+            </span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant w-full mt-xl">
+        <div class="w-full py-xl px-gutter grid grid-cols-1 md:grid-cols-4 gap-md max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4 col-span-1">
+                <span class="font-headline-md text-headline-md text-primary font-bold italic">Bloom &amp; Gold</span>
+                <p class="text-on-surface-variant font-body-md text-body-md">Handcrafted ceramics and premium gifts for those who appreciate the delicate beauty of everyday objects.</p>
+            </div>
+            <div class="flex flex-col gap-3 col-span-1">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Categorías</h4>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="tazas.html">Todas las Tazas</a>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="polos.html">Polos Estampados</a>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="tomatodos.html">Tomatodos</a>
+            </div>
+            <div class="flex flex-col gap-3 col-span-1">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Ayuda</h4>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="#">Preguntas Frecuentes</a>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="#">Refund Policy</a>
+            </div>
+            <div class="flex flex-col gap-3 col-span-1">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Contacto</h4>
+                <a class="text-on-surface-variant hover:text-primary hover:underline decoration-secondary transition-all duration-300 font-label-sm text-label-sm" href="mailto:hello@bloomandgold.com">hello@bloomandgold.com</a>
+                <div class="flex gap-4 mt-2">
+                    <a aria-label="Instagram" class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/" target="_blank">
+                        <span class="material-symbols-outlined">camera_alt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-gutter py-md border-t border-outline-variant/30 text-center">
+            <p class="text-secondary font-label-sm text-label-sm">© 2024 Bloom &amp; Gold. Handcrafted with love.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        let quantity = 1;
+
+        const qtyVal = document.getElementById('qty-val');
+        document.getElementById('qty-minus')?.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                qtyVal.innerText = quantity;
+            }
+        });
+        document.getElementById('qty-plus')?.addEventListener('click', () => {
+            quantity++;
+            qtyVal.innerText = quantity;
+        });
+
+        function changeImage(src, btn) {
+            document.getElementById('main-product-image').src = src;
+            // Reset borders
+            btn.parentNode.querySelectorAll('button').forEach(b => {
+                b.classList.remove('border-primary');
+                b.classList.add('border-transparent');
+            });
+            btn.classList.remove('border-transparent');
+            btn.classList.add('border-primary');
+        }
+
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isClosed = drawer.classList.contains('-translate-x-full');
+
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth;
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function addCurrentToCart() {
+            agregarAlCarrito({
+                id: 'taza-ceramic-rosa',
+                nombre: 'Taza Ceramic Rosa',
+                precio: 35.00,
+                imagen: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBi4cCLMPA3T-0UOvONh5S3ey_aoC7cxLPVVneiMZiVEdI_zCuuiKefab9323IW5pJFQvbjMVPILMVvf6QDS6E1kxV9-AivvpCOsOEQhn2I-0blociuLaMFaei-20jaUhjnVtzbkB67gc1OsO1OIEmbVSEQFf2OSV1U_OzifKY5hR8rkDxa_v-VIrUrxfJJ4hUxUrNPTGXKdAu1WL7MTWWWUTOhZM7VdnzPso4uHtvr4rX0hx_hfRAGuXeJPxPo11PLpKjrx0Wfz_dC',
+                cantidad: quantity
+            });
+        }
+    </script>
+</body>
+</html>

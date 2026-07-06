@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Polo Floral Grace - Bloom &amp; Gold</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-container-highest": "#e2e2e2",
+                            "surface-container": "#eeeeee",
+                            "surface-bright": "#f9f9f9",
+                            "primary-fixed": "#fbdbde",
+                            "error-container": "#ffdad6",
+                            "tertiary-container": "#e3e3cb",
+                            "primary": "#70585b",
+                            "surface-dim": "#dadada",
+                            "inverse-primary": "#debfc2",
+                            "primary-container": "#fadadd",
+                            "surface-tint": "#70585b",
+                            "on-surface-variant": "#4f4445",
+                            "surface-variant": "#e2e2e2",
+                            "on-surface": "#1a1c1c",
+                            "on-error-container": "#93000a",
+                            "secondary": "#735c00",
+                            "error": "#ba1a1a",
+                            "on-error": "#ffffff",
+                            "surface-container-high": "#e8e8e8",
+                            "inverse-surface": "#2f3131",
+                            "on-tertiary": "#ffffff",
+                            "surface": "#f9f9f9",
+                            "secondary-fixed": "#ffe088",
+                            "outline-variant": "#d2c3c4",
+                            "on-background": "#1a1c1c",
+                            "surface-container-lowest": "#ffffff",
+                            "primary-fixed-dim": "#debfc2",
+                            "on-secondary": "#ffffff",
+                            "on-primary-fixed-variant": "#574144",
+                            "tertiary-fixed": "#e4e4cc",
+                            "on-primary-fixed": "#281719",
+                            "on-tertiary-fixed-variant": "#474836",
+                            "on-secondary-fixed": "#241a00",
+                            "on-primary-container": "#765e61",
+                            "outline": "#807475",
+                            "surface-container-low": "#f3f3f4",
+                            "on-tertiary-fixed": "#1b1d0e",
+                            "on-tertiary-container": "#646552",
+                            "background": "#f9f9f9",
+                            "on-secondary-fixed-variant": "#574500",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed-dim": "#e9c349",
+                            "on-secondary-container": "#745c00",
+                            "tertiary": "#5e604d",
+                            "inverse-on-surface": "#f0f1f1",
+                            "secondary-container": "#fed65b",
+                            "tertiary-fixed-dim": "#c8c8b0"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "1rem",
+                            "lg": "2rem",
+                            "xl": "3rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "xs": "4px",
+                            "gutter": "24px",
+                            "xl": "80px",
+                            "sm": "12px",
+                            "md": "24px",
+                            "container-max": "1200px",
+                            "lg": "48px",
+                            "base": "8px"
+                        },
+                        "fontFamily": {
+                            "headline-xl": ["Playfair Display"],
+                            "headline-md": ["Playfair Display"],
+                            "label-md": ["Plus Jakarta Sans"],
+                            "headline-lg": ["Playfair Display"],
+                            "label-sm": ["Plus Jakarta Sans"],
+                            "headline-lg-mobile": ["Playfair Display"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            "body-md": ["Plus Jakarta Sans"]
+                        },
+                        "fontSize": {
+                            "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                            "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                            "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                            "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                            "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                            "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                        }
+                    },
+                },
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+        .cloud-shadow-1 {
+            box-shadow: 0px 4px 20px rgba(250, 218, 221, 0.3);
+        }
+    </style>
+    <script src="js/carrito.js" defer></script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+    <!-- TopAppBar -->
+    <header class="bg-surface border-b border-outline-variant sticky top-0 z-40 transition-transform duration-300 transform translate-y-0" id="top-app-bar">
+        <div class="flex flex-col w-full max-w-container-max mx-auto px-gutter py-base">
+            <div class="flex items-center justify-between">
+                <!-- Leading Icon -->
+                <button aria-label="Menu" class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container" onclick="toggleDrawer()">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                </button>
+                <!-- Brand Logo -->
+                <a class="font-headline-lg text-headline-lg text-primary italic tracking-wide" href="index.html">
+                    Bloom &amp; Gold
+                </a>
+                <!-- Trailing Action -->
+                <a href="carrito.html" aria-label="Cart" class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container group relative">
+                    <span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">shopping_cart</span>
+                    <span class="hidden md:inline font-label-md text-label-md">Carrito</span>
+                    <span id="cart-counter" class="absolute top-0 right-0 md:right-8 bg-secondary text-on-secondary font-label-sm text-[10px] w-4 h-4 flex items-center justify-center rounded-full hidden">0</span>
+                </a>
+            </div>
+            <!-- Desktop Navigation Links (Hidden on Mobile) -->
+            <nav class="hidden md:flex justify-center gap-lg mt-sm font-label-md text-label-md">
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="index.html">Home</a>
+                <a class="text-primary font-bold border-b-2 border-secondary py-2" href="productos.html">Products</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="sobre-nosotros.html">About Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="contacto.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NavigationDrawer (Mobile Only) -->
+    <aside class="fixed inset-y-0 left-0 z-50 flex flex-col rounded-r-lg h-full w-80 bg-surface-container-lowest shadow-[0px_10px_30px_rgba(0,0,0,0.05)] transform -translate-x-full transition-transform duration-300 md:hidden" id="mobile-drawer">
+        <div class="p-6 border-b border-outline-variant flex justify-between items-center">
+            <h2 class="font-headline-md text-headline-md text-primary">Menu</h2>
+            <button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-variant" onclick="toggleDrawer()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="flex flex-col gap-2">
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="index.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="font-label-md text-label-md">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 bg-primary-container text-on-primary-container rounded-full mx-2 transition-colors" href="productos.html">
+                        <span class="material-symbols-outlined">redeem</span>
+                        <span class="font-label-md text-label-md">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="sobre-nosotros.html">
+                        <span class="material-symbols-outlined">info</span>
+                        <span class="font-label-md text-label-md">About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="contacto.html">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span class="font-label-md text-label-md">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+    <main class="flex-grow w-full max-w-container-max mx-auto px-4 md:px-gutter lg:px-lg py-lg md:py-xl">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-lg">
+            <ol class="flex items-center space-x-2 font-label-sm text-label-sm text-on-surface-variant">
+                <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+                <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+                <li><a class="hover:text-primary transition-colors" href="productos.html">Products</a></li>
+                <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+                <li aria-current="page" class="text-primary font-semibold">Polo Floral Grace</li>
+            </ol>
+        </nav>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-xl md:gap-gutter lg:gap-xl">
+            <!-- Product Images Gallery -->
+            <div class="md:col-span-6 lg:col-span-7 flex flex-col md:flex-row-reverse gap-4">
+                <!-- Main Image -->
+                <div class="w-full flex-grow aspect-[4/5] md:aspect-auto md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden bg-[#F5F5DC] cloud-shadow-1 relative group">
+                    <img alt="Polo Floral Grace Beige" class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSH3OQsfevvilpGzdgLKtcho6d-68Xwe3TKyo8wXfaeKQP0PSRIX30TJ3DtLKJXvyMXO3VrNjeeWzOxgh-7vYZjIddouLHaYruprNzN7HLtLBBWWaWniyNWaTAAU45pYx-mlGeihhWS2pKBmrd6RrCfhx9YX4BL5bLmSjIQS4G9gyJjDtM6mBoV8iORyj-Y2YwvvcDJy0P8Cu-JY9I_FYlkxK_aDIh4EaJKi2oA7QQ5YRcCh-tKFS8hioezSRWQk5kMShJmcuIdWT_">
+                    <!-- Chips -->
+                    <div class="absolute top-4 left-4 flex flex-col gap-2">
+                        <span class="bg-primary-container/80 backdrop-blur-sm text-on-primary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Nuevo</span>
+                        <span class="bg-secondary-container/80 backdrop-blur-sm text-on-secondary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider">Handmade</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Info & Actions -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-start">
+                <div class="mb-6">
+                    <h1 class="font-headline-xl text-headline-xl md:text-[40px] text-on-surface mb-2">Polo Floral Grace</h1>
+                    <div class="flex items-center gap-4 mb-4">
+                        <p class="font-headline-lg text-headline-lg text-primary">S/ 65.00</p>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Polo de algodón 100% con bordado artesanal de flores silvestres. Diseño minimalista y tacto suave para tu día a día.
+                    </p>
+                </div>
+                <div class="w-full h-px bg-outline-variant/30 my-6"></div>
+                <!-- Color Selection -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-label-md text-label-md text-on-surface">Color: <span class="font-normal text-on-surface-variant ml-1" id="selected-color-label">Beige</span></span>
+                    </div>
+                    <div class="flex gap-3">
+                        <button aria-label="Select Beige color" class="w-10 h-10 rounded-full bg-[#F5F5DC] ring-2 ring-primary ring-offset-2 ring-offset-background transition-all color-swatch" data-color="Beige"></button>
+                        <button aria-label="Select White color" class="w-10 h-10 rounded-full bg-white border border-outline-variant transition-all color-swatch" data-color="White"></button>
+                        <button aria-label="Select Rose color" class="w-10 h-10 rounded-full bg-[#FFE4E1] border border-outline-variant transition-all color-swatch" data-color="Rose"></button>
+                    </div>
+                </div>
+                <!-- Size Selection -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-label-md text-label-md text-on-surface">Talla</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="size-btn flex-1 min-w-[60px] py-3 rounded-[12px] bg-surface border border-outline-variant font-label-md text-label-md text-on-surface hover:border-primary transition-colors focus:outline-none">S</button>
+                        <button class="size-btn size-btn-active flex-1 min-w-[60px] py-3 rounded-[12px] bg-primary-container border-2 border-primary font-label-md text-label-md text-on-primary-container transition-colors focus:outline-none">M</button>
+                        <button class="size-btn flex-1 min-w-[60px] py-3 rounded-[12px] bg-surface border border-outline-variant font-label-md text-label-md text-on-surface hover:border-primary transition-colors focus:outline-none">L</button>
+                    </div>
+                </div>
+                <!-- Quantity and Add to Cart -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <!-- Quantity Input -->
+                    <div class="flex items-center justify-between border border-outline-variant rounded-[12px] bg-surface h-14 sm:w-32 px-4 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+                        <button aria-label="Decrease quantity" class="text-on-surface-variant hover:text-primary focus:outline-none" onclick="modifyQty(-1)">
+                            <span class="material-symbols-outlined text-[20px]">remove</span>
+                        </button>
+                        <input aria-label="Quantity" id="quantity-input" class="w-12 text-center bg-transparent border-none p-0 font-body-lg text-body-lg focus:ring-0 text-on-surface" min="1" type="number" value="1">
+                        <button aria-label="Increase quantity" class="text-on-surface-variant hover:text-primary focus:outline-none" onclick="modifyQty(1)">
+                            <span class="material-symbols-outlined text-[20px]">add</span>
+                        </button>
+                    </div>
+                    <!-- Primary Action -->
+                    <button class="flex-1 h-14 bg-primary text-on-primary rounded-full font-label-md text-label-md hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group" onclick="agregarPoloAlCarrito()">
+                        <span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>
+                        Añadir al carrito
+                    </button>
+                </div>
+                <!-- Accordion details -->
+                <div class="flex flex-col border-t border-outline-variant/30">
+                    <details class="group py-4 border-b border-outline-variant/30 cursor-pointer" open>
+                        <summary class="flex justify-between items-center font-label-md text-label-md text-on-surface list-none">
+                            Detalles del Producto
+                            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:-rotate-180">keyboard_arrow_down</span>
+                        </summary>
+                        <div class="pt-4 font-body-md text-body-md text-on-surface-variant">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Material: 100% Algodón pima peruano.</li>
+                                <li>Bordado artesanal en hilo de seda.</li>
+                                <li>Corte clásico, cuello redondo.</li>
+                                <li>Hecho en Perú con amor.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant mt-xl">
+        <div class="w-full py-xl px-gutter grid grid-cols-1 md:grid-cols-4 gap-md max-w-container-max mx-auto">
+            <div class="col-span-2">
+                <a class="font-headline-md text-headline-md text-primary block mb-4 italic" href="index.html">Bloom &amp; Gold</a>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-sm">
+                    Regalos pensados, elegancia femenina y calidez artesanal para tus momentos especiales.
+                </p>
+                <div class="font-body-md text-body-md text-secondary">
+                    © 2024 Bloom &amp; Gold. Handcrafted with love.
+                </div>
+            </div>
+            <div>
+                <h3 class="font-label-md text-label-md text-on-surface mb-4">Policies</h3>
+                <ul class="flex flex-col gap-3 font-label-sm text-label-sm">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Refund Policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Shipping Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a aria-label="Contact us on WhatsApp" class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center w-14 h-14" href="https://wa.me/51967959557?text=Hola%20Bloom%20%26%20Gold%2C%20tengo%20una%20consulta%20sobre%20sus%20productos." target="_blank">
+        <span class="material-symbols-outlined">chat</span>
+    </a>
+
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isClosed = drawer.classList.contains('-translate-x-full');
+
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth;
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Modificar cantidad
+        function modifyQty(amount) {
+            const input = document.getElementById('quantity-input');
+            let val = parseInt(input.value) || 1;
+            val += amount;
+            if (val < 1) val = 1;
+            input.value = val;
+        }
+
+        // Selección de color
+        const colorSwatches = document.querySelectorAll('.color-swatch');
+        colorSwatches.forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                colorSwatches.forEach(s => {
+                    s.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-background');
+                });
+                swatch.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-background');
+                document.getElementById('selected-color-label').innerText = swatch.getAttribute('data-color');
+            });
+        });
+
+        // Selección de talla
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => {
+                    b.className = "size-btn flex-1 min-w-[60px] py-3 rounded-[12px] bg-surface border border-outline-variant font-label-md text-label-md text-on-surface hover:border-primary transition-colors focus:outline-none";
+                });
+                btn.className = "size-btn size-btn-active flex-1 min-w-[60px] py-3 rounded-[12px] bg-primary-container border-2 border-primary font-label-md text-label-md text-on-primary-container transition-colors focus:outline-none";
+            });
+        });
+
+        // Agregar al carrito
+        function agregarPoloAlCarrito() {
+            const qtyInput = document.getElementById('quantity-input');
+            const qty = parseInt(qtyInput.value) || 1;
+            const color = document.getElementById('selected-color-label').innerText;
+            const activeSizeBtn = document.querySelector('.size-btn-active');
+            const size = activeSizeBtn ? activeSizeBtn.innerText : 'M';
+
+            agregarAlCarrito({
+                id: 'polo-floral-grace',
+                nombre: 'Polo Floral Grace',
+                precio: 65.00,
+                imagen: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSH3OQsfevvilpGzdgLKtcho6d-68Xwe3TKyo8wXfaeKQP0PSRIX30TJ3DtLKJXvyMXO3VrNjeeWzOxgh-7vYZjIddouLHaYruprNzN7HLtLBBWWaWniyNWaTAAU45pYx-mlGeihhWS2pKBmrd6RrCfhx9YX4BL5bLmSjIQS4G9gyJjDtM6mBoV8iORyj-Y2YwvvcDJy0P8Cu-JY9I_FYlkxK_aDIh4EaJKi2oA7QQ5YRcCh-tKFS8hioezSRWQk5kMShJmcuIdWT_',
+                cantidad: qty,
+                personalizacion: {
+                    color: color,
+                    talla: size
+                }
+            });
+        }
+    </script>
+</body>
+</html>

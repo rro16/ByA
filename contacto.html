@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact Us | Bloom &amp; Gold</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3f4",
+                        "secondary": "#735c00",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "inverse-on-surface": "#f0f1f1",
+                        "outline": "#807475",
+                        "on-primary-container": "#765e61",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#70585b",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-container": "#646552",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#745c00",
+                        "on-primary-fixed": "#281719",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-container": "#e3e3cb",
+                        "primary-fixed-dim": "#debfc2",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary": "#5e604d",
+                        "primary-container": "#fadadd",
+                        "on-primary-fixed-variant": "#574144",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#debfc2",
+                        "tertiary-fixed": "#e4e4cc",
+                        "outline-variant": "#d2c3c4",
+                        "secondary-container": "#fed65b",
+                        "primary": "#70585b",
+                        "on-surface-variant": "#4f4445",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "primary-fixed": "#fbdbde",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "container-max": "1200px",
+                        "xs": "4px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .cloud-shadow {
+            box-shadow: 0px 4px 20px rgba(250, 218, 221, 0.3);
+        }
+        .cloud-shadow-hover:hover {
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            transition: all 0.3s ease-in-out;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(2.4); opacity: 0; }
+        }
+        .pulse-animation::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #fadadd;
+            animation: pulse-ring 3s infinite;
+            z-index: -1;
+        }
+    </style>
+    <script src="js/carrito.js" defer></script>
+</head>
+<body class="font-body-md overflow-x-hidden">
+    <!-- TopAppBar -->
+    <header class="bg-surface dark:bg-surface border-b border-outline-variant w-full sticky top-0 z-40">
+        <div class="flex flex-col w-full max-w-container-max mx-auto px-gutter py-base">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-md">
+                    <button class="text-primary lg:hidden" onclick="toggleDrawer()">
+                        <span class="material-symbols-outlined cursor-pointer">menu</span>
+                    </button>
+                    <a class="font-headline-lg text-headline-lg text-primary italic font-bold" href="index.html">Bloom &amp; Gold</a>
+                </div>
+                <nav class="hidden md:flex items-center gap-lg">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+                    <!-- Products Dropdown -->
+                    <div class="relative group">
+                        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="productos.html">
+                            Productos
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-lg rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-outline-variant p-4">
+                            <ul class="flex flex-col gap-2">
+                                <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="tazas.html">Tazas</a></li>
+                                <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="polos.html">Polos</a></li>
+                                <li><a class="block px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-primary-container/30 hover:text-primary rounded-xl transition-colors" href="tomatodos.html">Tomatodos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="sobre-nosotros.html">About Us</a>
+                    <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-secondary" href="contacto.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-md">
+                    <a href="carrito.html" class="font-label-md text-label-md text-primary flex items-center gap-xs hover:opacity-80 transition-opacity relative">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span class="hidden sm:inline">Carrito</span>
+                        <span id="cart-counter" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full hidden">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NavigationDrawer (Mobile Only) -->
+    <aside class="fixed inset-y-0 left-0 z-50 flex flex-col rounded-r-lg h-full w-80 bg-surface-container-lowest shadow-[0px_10px_30px_rgba(0,0,0,0.05)] transform -translate-x-full transition-transform duration-300 md:hidden" id="mobile-drawer">
+        <div class="p-6 border-b border-outline-variant flex justify-between items-center">
+            <h2 class="font-headline-md text-headline-md text-primary">Menu</h2>
+            <button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-variant" onclick="toggleDrawer()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="flex flex-col gap-2">
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="index.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="font-label-md text-label-md">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="productos.html">
+                        <span class="material-symbols-outlined">redeem</span>
+                        <span class="font-label-md text-label-md">Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="sobre-nosotros.html">
+                        <span class="material-symbols-outlined">info</span>
+                        <span class="font-label-md text-label-md">About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 bg-primary-container text-on-primary-container rounded-full mx-2 transition-colors" href="contacto.html">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span class="font-label-md text-label-md">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+    <main class="max-w-container-max mx-auto px-gutter py-xl">
+        <!-- Hero Section -->
+        <section class="text-center mb-xl">
+            <h2 class="font-headline-xl text-headline-xl text-primary mb-md">We'd Love to Hear From You</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Whether you have a question about our handcrafted gifts, need help with an order, or just want to say hi, our team is here for you.
+            </p>
+        </section>
+
+        <!-- Bento Grid Contact Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-md items-start">
+            <!-- Contact Info & Socials -->
+            <div class="lg:col-span-5 space-y-md">
+                <div class="bg-white p-lg rounded-lg cloud-shadow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-lg">Direct Reach</h3>
+                    <div class="space-y-lg">
+                        <div class="flex items-start gap-md">
+                            <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                            </div>
+                            <div>
+                                <p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-xs">Email Us</p>
+                                <p class="font-body-md text-body-md text-on-surface">hello@bloomandgold.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-md">
+                            <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">call</span>
+                            </div>
+                            <div>
+                                <p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-xs">Call Us</p>
+                                <p class="font-body-md text-body-md text-on-surface">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-md">
+                            <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                            </div>
+                            <div>
+                                <p class="font-label-md text-label-md text-primary uppercase tracking-wider mb-xs">Visit Our Atelier</p>
+                                <p class="font-body-md text-body-md text-on-surface">123 Artisan Lane, Rosewood District<br>Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socials & Large WhatsApp Button -->
+                <div class="bg-surface-container-low p-lg rounded-lg border border-outline-variant/30 flex flex-col gap-lg">
+                    <h3 class="font-headline-md text-headline-md text-primary">Connect With Us</h3>
+                    <div class="flex gap-md">
+                        <a class="flex flex-col items-center gap-base group" href="https://www.instagram.com/" target="_blank">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center cloud-shadow group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-primary">camera_alt</span>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">Instagram</span>
+                        </a>
+                        <a class="flex flex-col items-center gap-base group" href="https://www.tiktok.com/" target="_blank">
+                            <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center cloud-shadow group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-primary">music_note</span>
+                            </div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">TikTok</span>
+                        </a>
+                    </div>
+                    <a href="https://wa.me/51967959557?text=Hola%20Bloom%20%26%20Gold%2C%20tengo%20una%20consulta." target="_blank" class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-md rounded-full flex items-center justify-center gap-md hover:opacity-90 transition-all active:scale-95 text-center">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Contact via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-7 bg-white p-lg rounded-lg cloud-shadow">
+                <h3 class="font-headline-md text-headline-md text-primary mb-lg">Send a Message</h3>
+                <form action="#" class="space-y-lg" id="contactForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                        <div class="space-y-xs">
+                            <label class="font-label-md text-label-md text-on-surface-variant" for="name">Full Name</label>
+                            <input class="w-full bg-background border-none rounded-md p-md focus:ring-2 focus:ring-primary-container transition-all text-body-md" id="name" name="name" placeholder="E.g. Amelia Rose" type="text" required>
+                        </div>
+                        <div class="space-y-xs">
+                            <label class="font-label-md text-label-md text-on-surface-variant" for="email">Email Address</label>
+                            <input class="w-full bg-background border-none rounded-md p-md focus:ring-2 focus:ring-primary-container transition-all text-body-md" id="email" name="email" placeholder="amelia@example.com" type="email" required>
+                        </div>
+                    </div>
+                    <div class="space-y-xs">
+                        <label class="font-label-md text-label-md text-on-surface-variant" for="subject">Subject</label>
+                        <select class="w-full bg-background border-none rounded-md p-md focus:ring-2 focus:ring-primary-container transition-all text-body-md text-on-surface-variant" id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="order">Order Status</option>
+                            <option value="custom">Custom Order Request</option>
+                            <option value="press">Press &amp; Collaborations</option>
+                        </select>
+                    </div>
+                    <div class="space-y-xs">
+                        <label class="font-label-md text-label-md text-on-surface-variant" for="message">Message</label>
+                        <textarea class="w-full bg-background border-none rounded-md p-md focus:ring-2 focus:ring-primary-container transition-all text-body-md" id="message" name="message" placeholder="How can we help you create something special?" rows="5" required></textarea>
+                    </div>
+                    <button class="w-full md:w-auto px-lg py-md bg-primary text-on-primary rounded-full font-label-md text-label-md hover:opacity-90 transition-all active:scale-95 flex items-center justify-center gap-base" type="submit">
+                        Send Message
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Decorative Map Section -->
+        <section class="mt-xl h-[400px] w-full rounded-lg overflow-hidden cloud-shadow relative">
+            <div class="bg-cover bg-center w-full h-full grayscale-[50%] opacity-80" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAC2iOl74sxWG2ViOtz-v-g2ck0KR2XdRSY_VXysGDsijXyRKzTaTBLvkbqTJQE32B6DTp1FZvLEO8TNqq-XKO1AW4iwW1Ns0WQNPlnz9jAWxt8MNCrFSOFMG_VP-GXqJwA0kmFI9xn4ougZwymEwn4CvpFo0hs3_VVz2bWodZQlQM95TToqnKrOYWZBYrnenjqPhmnFPmbE901QRPJpKzaUpwjU_-OhP5YD5moMp2E-bzjEVaVVsB8oL2kbkFrpQCS9gwRfLMkKmNq')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-md left-md bg-white p-md rounded-lg cloud-shadow flex items-center gap-md">
+                <div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary">store</span>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-on-surface">Bloom &amp; Gold Atelier</h4>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">Open Mon-Sat, 10am - 7pm</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant w-full mt-xl">
+        <div class="w-full py-xl px-gutter grid grid-cols-1 md:grid-cols-4 gap-md max-w-container-max mx-auto">
+            <div class="space-y-sm">
+                <h4 class="font-headline-md text-headline-md text-primary">Bloom &amp; Gold</h4>
+                <p class="font-body-md text-body-md text-secondary">© 2024 Bloom &amp; Gold. Handcrafted with love.</p>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <h5 class="font-label-md text-label-md text-on-surface-variant font-bold mb-xs">Legal</h5>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline decoration-secondary" href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline decoration-secondary" href="#">Refund Policy</a>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <h5 class="font-label-md text-label-md text-on-surface-variant font-bold mb-xs">Envío</h5>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline decoration-secondary" href="#">Shipping Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline decoration-secondary" href="#">Cookies</a>
+            </div>
+            <div class="space-y-sm">
+                <h5 class="font-label-md text-label-md text-on-surface-variant font-bold mb-xs">Redes Sociales</h5>
+                <div class="flex gap-md">
+                    <a class="text-primary hover:scale-110 transition-transform" href="https://www.instagram.com/" target="_blank"><span class="material-symbols-outlined">camera_alt</span></a>
+                    <a class="text-primary hover:scale-110 transition-transform" href="https://www.tiktok.com/" target="_blank"><span class="material-symbols-outlined">music_note</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-gutter right-gutter z-50">
+        <a class="whatsapp-pulse bg-primary text-on-primary rounded-full p-4 shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/51967959557?text=Hola%20Bloom%20%26%20Gold%2C%20tengo%20una%20consulta%20sobre%20sus%20productos." target="_blank">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+            <span class="absolute right-full mr-4 bg-white px-4 py-2 rounded-full text-label-sm text-primary cloud-shadow-l2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-outline-variant">
+                ¿Necesitas ayuda?
+            </span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isClosed = drawer.classList.contains('-translate-x-full');
+
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth;
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check</span> Message Sent!';
+                btn.classList.replace('bg-primary', 'bg-tertiary');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-tertiary', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Tu Carrito | Bloom &amp; Gold</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "on-surface-variant": "#4f4445",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#70585b",
+                        "on-secondary-container": "#745c00",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d2c3c4",
+                        "primary-fixed": "#fbdbde",
+                        "primary-container": "#fadadd",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#5e604d",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "tertiary-container": "#e3e3cb",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "outline": "#807475",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-primary-fixed-variant": "#574144",
+                        "primary": "#70585b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-primary": "#debfc2",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-tertiary-container": "#646552",
+                        "secondary": "#735c00",
+                        "on-primary-fixed": "#281719",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "on-primary-container": "#765e61",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed": "#e4e4cc",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#fed65b",
+                        "background": "#f9f9f9",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#1b1d0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "container-max": "1200px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .cloud-shadow-l1 {
+            box-shadow: 0px 4px 20px rgba(250, 218, 221, 0.3);
+        }
+        .cloud-shadow-l2 {
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .animate-pulse-custom {
+            animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script src="js/carrito.js" defer></script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-primary">
+    <!-- TopAppBar -->
+    <header class="bg-surface sticky top-0 z-40 border-b border-outline-variant">
+        <div class="flex flex-col w-full max-w-container-max mx-auto px-gutter py-base md:flex-row md:items-center md:justify-between">
+            <div class="flex items-center gap-md justify-between md:justify-start w-full md:w-auto">
+                <div class="flex items-center gap-md">
+                    <button class="text-primary lg:hidden" onclick="toggleDrawer()">
+                        <span class="material-symbols-outlined cursor-pointer">menu</span>
+                    </button>
+                    <a class="font-headline-lg text-headline-lg text-primary italic font-bold" href="index.html">Bloom &amp; Gold</a>
+                </div>
+                <!-- Cart Actions Mobile -->
+                <a href="carrito.html" class="md:hidden text-primary hover:opacity-80 transition-opacity relative">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span id="cart-counter" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full hidden">0</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center gap-lg">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="productos.html">Productos</a>
+                <a class="text-primary font-bold border-b-2 border-secondary font-label-md text-label-md" href="carrito.html">Cart</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="sobre-nosotros.html">About Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="contacto.html">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-sm">
+                <a href="carrito.html" class="flex items-center gap-xs text-primary hover:opacity-80 transition-opacity relative">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="font-label-md text-label-md">Cart</span>
+                    <span id="cart-counter" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full hidden">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer (Mobile Only) -->
+    <aside class="fixed inset-y-0 left-0 z-50 flex flex-col rounded-r-lg h-full w-80 bg-surface-container-lowest shadow-[0px_10px_30px_rgba(0,0,0,0.05)] transform -translate-x-full transition-transform duration-300 md:hidden" id="mobile-drawer">
+        <div class="p-6 border-b border-outline-variant flex justify-between items-center">
+            <h2 class="font-headline-md text-headline-md text-primary">Menu</h2>
+            <button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-variant" onclick="toggleDrawer()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="flex flex-col gap-2">
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="index.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="font-label-md text-label-md">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="productos.html">
+                        <span class="material-symbols-outlined">redeem</span>
+                        <span class="font-label-md text-label-md">Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="sobre-nosotros.html">
+                        <span class="material-symbols-outlined">info</span>
+                        <span class="font-label-md text-label-md">About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex items-center gap-4 px-6 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="contacto.html">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span class="font-label-md text-label-md">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+    <main class="max-w-container-max mx-auto px-gutter py-xl">
+        <!-- Cart Logic Wrapper -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl" id="cart-content">
+            <!-- Items Section -->
+            <div class="lg:col-span-8">
+                <div class="flex items-center justify-between mb-lg">
+                    <h2 class="font-headline-xl text-headline-xl text-on-surface">Tu Carrito</h2>
+                    <span id="items-count-badge" class="text-on-surface-variant font-label-md text-label-md">0 Artículos</span>
+                </div>
+                
+                <!-- Dynamic Items Container -->
+                <div id="cart-items-list" class="space-y-md">
+                    <!-- JavaScript will inject items here -->
+                </div>
+
+                <div class="mt-lg">
+                    <a href="productos.html" class="text-secondary border border-secondary rounded-full px-lg py-sm font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-all inline-flex items-center gap-base">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Seguir Comprando
+                    </a>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="lg:col-span-4">
+                <div class="bg-surface-container-low rounded-lg p-lg sticky top-28 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-lg">Resumen</h2>
+                    <div class="space-y-base mb-lg">
+                        <div class="flex justify-between text-on-surface-variant font-body-md text-body-md">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">S/ 0.00</span>
+                        </div>
+                        <div class="flex justify-between text-on-surface-variant font-body-md text-body-md">
+                            <span>Envío</span>
+                            <span class="text-secondary font-semibold">Calculado en WhatsApp</span>
+                        </div>
+                        <div class="pt-base border-t border-outline-variant flex justify-between items-end">
+                            <span class="font-label-md text-label-md text-on-surface">Total</span>
+                            <span id="cart-total" class="font-headline-lg text-headline-lg text-primary">S/ 0.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-primary-container/30 rounded-DEFAULT p-md mb-lg">
+                        <p class="text-on-primary-container font-label-sm text-label-sm leading-relaxed">
+                            <span class="material-symbols-outlined text-[18px] align-middle mr-xs">info</span>
+                            Se abrirá WhatsApp con tu pedido ya redactado. ¡Solo tendrás que darle a enviar!
+                        </p>
+                    </div>
+                    
+                    <button onclick="checkoutWhatsApp()" class="w-full bg-primary text-on-primary rounded-full py-md px-lg font-label-md text-label-md flex items-center justify-center gap-base hover:opacity-90 active:scale-95 transition-all shadow-lg">
+                        <span class="material-symbols-outlined">send</span>
+                        Finalizar pedido por WhatsApp
+                    </button>
+                    
+                    <div class="mt-lg flex items-center justify-center gap-md opacity-50">
+                        <span class="material-symbols-outlined">shield</span>
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest">Compra Segura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div class="hidden flex-col items-center justify-center py-xl text-center" id="empty-state">
+            <div class="w-64 h-64 mb-lg opacity-80">
+                <img class="w-full h-full object-contain" alt="Carrito vacío" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6f7JOOrUuvCesQ40-xBpZbfybcjMgPQ_eadY24iW4Wzfss7t-ItRCh5XDWtJ-tteIFxo7jCsU-PVZPPHTmcI5fbePeawjObyejXnPlzwwKxofZZffCfJgswZb2eVsI6IUDdX7D1aUCyPQ6AM1aOqXyUH6T1eXt96ziEceMJv2D47YI3Rgp7duj54TReWNXRq3PMQPNa1eXsZmgdtrjzlIRTCm1LuX-Hlq222d-HrqCALsui20r2rgol5GPwXykUAOpqsNTIrHXdhT">
+            </div>
+            <h2 class="font-headline-xl text-headline-xl text-on-surface mb-base">Tu carrito está vacío</h2>
+            <p class="text-on-surface-variant font-body-md text-body-md max-w-md mx-auto mb-lg">Parece que aún no has encontrado ese regalo perfecto. ¡Explora nuestra colección y llena tu carrito de magia!</p>
+            <a href="productos.html" class="bg-primary text-on-primary rounded-full px-xl py-md font-label-md text-label-md hover:scale-105 transition-transform shadow-lg inline-block">
+                Seguir comprando
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant mt-xl">
+        <div class="w-full py-xl px-gutter grid grid-cols-1 md:grid-cols-4 gap-md max-w-container-max mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="font-headline-md text-headline-md text-primary mb-base italic">Bloom &amp; Gold</h3>
+                <p class="text-on-surface-variant font-body-md text-body-md">Regalos artesanales con un toque de elegancia y corazón.</p>
+            </div>
+            <div class="flex flex-col gap-sm">
+                <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Enlaces</span>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Refund Policy</a>
+            </div>
+            <div class="flex flex-col gap-sm">
+                <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Ayuda</span>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Shipping Policy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Cookies</a>
+            </div>
+            <div class="col-span-1">
+                <p class="text-secondary font-label-sm text-label-sm mb-base">© 2024 Bloom &amp; Gold. Handcrafted with love.</p>
+                <div class="flex gap-md">
+                    <span class="material-symbols-outlined text-outline">local_mall</span>
+                    <span class="material-symbols-outlined text-outline">favorite</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-gutter right-gutter z-50">
+        <a class="whatsapp-pulse bg-primary text-on-primary rounded-full p-4 shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/51967959557?text=Hola%20Bloom%20%26%20Gold%2C%20tengo%20una%20consulta%20sobre%20sus%20productos." target="_blank">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+            <span class="absolute right-full mr-4 bg-white px-4 py-2 rounded-full text-label-sm text-primary cloud-shadow-l2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-outline-variant">
+                ¿Necesitas ayuda?
+            </span>
+        </a>
+    </div>
+
+    <!-- Page Logic -->
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isClosed = drawer.classList.contains('-translate-x-full');
+
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth;
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function renderCarrito() {
+            const items = obtenerCarrito();
+            const listContainer = document.getElementById('cart-items-list');
+            const cartContent = document.getElementById('cart-content');
+            const emptyState = document.getElementById('empty-state');
+            const countBadge = document.getElementById('items-count-badge');
+            
+            if (items.length === 0) {
+                cartContent.classList.add('hidden');
+                cartContent.classList.remove('grid');
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+                countBadge.textContent = '0 Artículos';
+                return;
+            }
+
+            cartContent.classList.remove('hidden');
+            cartContent.classList.add('grid');
+            emptyState.classList.add('hidden');
+            emptyState.classList.remove('flex');
+            
+            const totalCount = items.reduce((acc, item) => acc + item.cantidad, 0);
+            countBadge.textContent = `${totalCount} Artículo${totalCount !== 1 ? 's' : ''}`;
+
+            listContainer.innerHTML = '';
+            let total = 0;
+
+            items.forEach((item) => {
+                const persKey = item.personalizacion ? JSON.stringify(item.personalizacion) : '';
+                const subtotal = item.precio * item.cantidad;
+                total += subtotal;
+
+                const itemRow = document.createElement('div');
+                itemRow.className = "bg-surface-container-lowest rounded-lg p-md flex flex-col sm:flex-row gap-md shadow-[0px_4px_20px_rgba(250,218,221,0.3)] transition-transform hover:-translate-y-1";
+                
+                let detailsText = '';
+                if (item.personalizacion && (item.personalizacion.nombre || item.personalizacion.detalle)) {
+                    detailsText = `<p class="text-on-surface-variant font-body-md text-sm mt-1">Personalizado: ${item.personalizacion.nombre || ''} ${item.personalizacion.detalle || ''}</p>`;
+                }
+
+                itemRow.innerHTML = `
+                    <div class="w-full sm:w-32 h-32 bg-[#F5F5DC] rounded-DEFAULT overflow-hidden flex-shrink-0">
+                        <img alt="${item.nombre}" class="w-full h-full object-cover" src="${item.imagen}">
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface">${item.nombre}</h3>
+                                ${detailsText}
+                            </div>
+                            <button onclick="eliminarDelCarrito('${item.id}', '${persKey.replace(/'/g, "\\'")}')" class="text-outline hover:text-error transition-colors p-1">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between mt-base">
+                            <div class="flex items-center border border-outline-variant rounded-full px-base py-xs gap-sm">
+                                <button onclick="modificarCantidad('${item.id}', '${persKey.replace(/'/g, "\\'")}', ${item.cantidad - 1})" class="text-primary hover:opacity-75">
+                                    <span class="material-symbols-outlined text-[20px]">remove</span>
+                                </button>
+                                <span class="font-label-md text-label-md w-6 text-center">${item.cantidad}</span>
+                                <button onclick="modificarCantidad('${item.id}', '${persKey.replace(/'/g, "\\'")}', ${item.cantidad + 1})" class="text-primary hover:opacity-75">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                            <span class="font-headline-md text-headline-md text-primary">S/ ${subtotal.toFixed(2)}</span>
+                        </div>
+                    </div>
+                `;
+                listContainer.appendChild(itemRow);
+            });
+
+            document.getElementById('cart-subtotal').textContent = `S/ ${total.toFixed(2)}`;
+            document.getElementById('cart-total').textContent = `S/ ${total.toFixed(2)}`;
+        }
+
+        function modificarCantidad(id, persKeyStr, nuevaCantidad) {
+            actualizarCantidad(id, persKeyStr, nuevaCantidad);
+            renderCarrito();
+        }
+
+        function checkoutWhatsApp() {
+            const items = obtenerCarrito();
+            if (items.length === 0) return;
+
+            let mensaje = "¡Hola! Quisiera realizar un pedido de Bloom & Gold:\n\n";
+            let total = 0;
+            items.forEach((item, index) => {
+                const subtotal = item.precio * item.cantidad;
+                total += subtotal;
+                mensaje += `${index + 1}. *${item.nombre}*\n`;
+                mensaje += `   Cantidad: ${item.cantidad}\n`;
+                mensaje += `   Precio: S/ ${item.precio.toFixed(2)}\n`;
+                if (item.personalizacion && (item.personalizacion.nombre || item.personalizacion.detalle)) {
+                    mensaje += `   Personalización: ${item.personalizacion.nombre || ''} - ${item.personalizacion.detalle || ''}\n`;
+                }
+                mensaje += `   Subtotal: S/ ${subtotal.toFixed(2)}\n\n`;
+            });
+            mensaje += `*Total estimado: S/ ${total.toFixed(2)}*\n\n`;
+            mensaje += "(Envío a coordinar por este medio)\n\n¡Muchas gracias! 😊";
+
+            const url = `https://wa.me/51967959557?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCarrito();
+            window.addEventListener('cart-updated', renderCarrito);
+        });
+    </script>
+</body>
+</html>
